@@ -4,7 +4,7 @@ WORKDIR /opt
 
 COPY hello.nasm .
 
-RUN nasm -felf32 http.asm -o http-okay.o
+RUN nasm -felf32 hello.nasm -o http-okay.o
 RUN ld --strip-all --omagic -melf_i386 http-okay.o -o http-okay
 
 FROM scratch
