@@ -1,14 +1,7 @@
-FROM emilienmottet/nasm AS builder
+FROM docker:dind
 
 WORKDIR /opt
 
-COPY hello.nasm .
+ADD ./docker-compose.yml docker-compose.yml
 
-RUN nasm -felf32 hello.nasm -o http-okay.o
-RUN ld --strip-all --omagic -melf_i386 http-okay.o -o http-okay
-
-FROM scratch
-
-COPY --from=builder /opt/http-okay /usr/bin/http-okay
-
-ENTRYPOINT ["/usr/bin/http-okay"]
+ENTRYPOINT ["docker", "compose", "up"]
