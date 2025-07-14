@@ -2,6 +2,6 @@ services:
   web:
     image: nginx
     ports:
-      - "8080:8081"
+      - "8081:8081"
     environment:
       - NGINX_PORT=8081
