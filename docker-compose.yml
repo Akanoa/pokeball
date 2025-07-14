@@ -1,7 +1,5 @@
 services:
   web:
     image: nginx
-    ports:
-      - "80"
     environment:
       - NGINX_PORT=8080
