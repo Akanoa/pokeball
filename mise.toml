@@ -1,2 +1,0 @@
-[tasks]
-run = "docker compose up -d"
