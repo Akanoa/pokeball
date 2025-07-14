@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_a32e54eb-d480-43a1-a44f-ca7d85a3ddfb",
+      "org_id": "user_ad6261f3-b65d-4d58-b06a-0d7606937461",
+      "deploy_url": "https://push-n3-par-clevercloud-customers.services.clever-cloud.com/app_a32e54eb-d480-43a1-a44f-ca7d85a3ddfb.git",
+      "name": "pokeball-docker",
+      "alias": "pokeball-docker"
+    }
+  ]
+}
