@@ -8,7 +8,7 @@ mkdir -p ${FDB_HOME}
 mkdir -p ${FDB_HOME}/lib
 cp foundationdb/* ${FDB_HOME}/
 
-FDB_VERSION=7.3.68
+FDB_VERSION=${FDB_VERSION:-7.4.0}
 wget -O ${FDB_HOME}/fdbserver https://github.com/apple/foundationdb/releases/download/${FDB_VERSION}/fdbserver.x86_64
 wget -O ${FDB_HOME}/fdbmonitor https://github.com/apple/foundationdb/releases/download/${FDB_VERSION}/fdbmonitor.x86_64
 wget -O ${FDB_HOME}/fdbcli https://github.com/apple/foundationdb/releases/download/${FDB_VERSION}/fdbcli.x86_64
