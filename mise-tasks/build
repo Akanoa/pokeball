@@ -33,3 +33,6 @@ mkdir -p /home/bas/foundationdb/
 FDB_VERSION=7.3.68
 wget -O /home/bas/foundationdb/fdbserver https://github.com/apple/foundationdb/releases/download/${FDB_VERSION}/fdbserver.x86_64
 wget -O /home/bas/foundationdb/fdbmonitor https://github.com/apple/foundationdb/releases/download/${FDB_VERSION}/fdbmonitor.x86_64
+wget -O /home/bas/foundationdb/fdbcli https://github.com/apple/foundationdb/releases/download/${FDB_VERSION}/fdbcli.x86_64
+
+chmod +x /home/bas/foundationdb/fdbserver /home/bas/foundationdb/fdbmonitor /home/bas/foundationdb/fdbcli
