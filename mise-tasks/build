@@ -37,5 +37,4 @@ wget -O ${FDB_HOME}/fdbcli https://github.com/apple/foundationdb/releases/downlo
 chmod +x ${FDB_HOME}/fdbserver /home/bas/foundationdb/fdbmonitor /home/bas/foundationdb/fdbcli
 
 echo PATH="\$PATH:$FDB_HOME" >> ~/.bashrc
-source ~/.bashrc
-fdbcli -C ${FDB_HOME}/fdb.cluster --exec "configure new single memory" --timeout 20
+echo FDB_HOME={$FDB_HOME} >> ~/.bashrc

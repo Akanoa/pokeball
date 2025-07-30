@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 #MISE description="Run the app"
 
+
+source ~/.bashrc
+fdbmonitor --conffile ${FDB_HOME}/foundationdb.conf --lockfile ${FDB_HOME}/fdbmonitor.pid --daemonize
+fdbcli -C ${FDB_HOME}/fdb.cluster --exec "configure new single memory" --timeout 20
+
 export KESTRA_PLUGINS_PATH=$APP_HOME/kestra-install/plugins
 /opt/openjdk-bin-23.0.2_p7/bin/java -jar $APP_HOME/kestra plugins list
 /opt/openjdk-bin-23.0.2_p7/bin/java -jar $APP_HOME/kestra server standalone --config $APP_HOME/config.yml
+
