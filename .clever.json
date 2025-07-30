@@ -1,9 +1,9 @@
 {
   "apps": [
     {
-      "app_id": "app_9fef0629-f568-4b53-afa7-0aecc31baee7",
+      "app_id": "app_84c6291b-2068-43ca-9469-7fd91aac6195",
       "org_id": "user_ad6261f3-b65d-4d58-b06a-0d7606937461",
-      "deploy_url": "https://push-n3-par-clevercloud-customers.services.clever-cloud.com/app_9fef0629-f568-4b53-afa7-0aecc31baee7.git",
+      "deploy_url": "https://push-n3-par-clevercloud-customers.services.clever-cloud.com/app_84c6291b-2068-43ca-9469-7fd91aac6195.git",
       "name": "pokeball",
       "alias": "pokeball"
     }
