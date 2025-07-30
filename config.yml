@@ -22,7 +22,7 @@ kestra:
       accessKey: "${CELLAR_ADDON_KEY_ID}"
       secretKey:  "${CELLAR_ADDON_KEY_SECRET}"
       region: US
-      bucket: kestra-internal-storage
+      bucket: kestra-internal-storage-noa
   tasks:
     tmpDir:
       path: "/tmp/kestra-wd/tmp"
