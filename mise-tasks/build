@@ -22,6 +22,7 @@ mkdir -p $KESTRA_PLUGINS_PATH
 
 # Install plugins
 /opt/openjdk-bin-23.0.2_p7/bin/java -jar $APP_HOME/kestra plugins install io.kestra.storage:storage-minio:LATEST
+/opt/openjdk-bin-23.0.2_p7/bin/java -jar $APP_HOME/kestra plugins install io.kestra.plugin:plugin-script-shell:LATEST
 
 # Install fdb
 FDB_HOME=/home/bas/foundationdb
@@ -38,3 +39,4 @@ chmod +x ${FDB_HOME}/fdbserver /home/bas/foundationdb/fdbmonitor /home/bas/found
 
 echo PATH="\$PATH:$FDB_HOME" >> ~/.bashrc
 echo FDB_HOME="${FDB_HOME}" >> ~/.bashrc
+echo KESTRA_PLUGINS_PATH="$APP_HOME/kestra-install/plugins" >> ~/.bashrc
