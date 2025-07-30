@@ -22,4 +22,14 @@ mkdir -p $KESTRA_PLUGINS_PATH
 
 # Install plugins
 /opt/openjdk-bin-23.0.2_p7/bin/java -jar $APP_HOME/kestra plugins install io.kestra.storage:storage-minio:LATEST
-/opt/openjdk-bin-23.0.2_p7/bin/java -jar $APP_HOME/kestra plugins install io.kestra.plugin:plugin-docker:LATEST
+
+# Install fdb
+
+cp foundationdb/* /home/bas/foundationdb/
+
+mkdir -p /home/bas/foundationdb/
+
+
+FDB_VERSION=7.3.68
+wget -O /home/bas/foundationdb/fdbserver https://github.com/apple/foundationdb/releases/download/${FDB_VERSION}/fdbserver.x86_64
+wget -O /home/bas/foundationdb/fdbmonitor https://github.com/apple/foundationdb/releases/download/7.3.69/fdbmonitor.x86_64
