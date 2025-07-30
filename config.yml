@@ -16,9 +16,10 @@ kestra:
   repository:
     type: postgres
   storage:
-    type: s3
-    s3:
+    type: minio
+    minio:
       endpoint: https://${CELLAR_ADDON_HOST}
+      port: 80
       accessKey: ${CELLAR_ADDON_KEY_ID}
       secretKey:  ${CELLAR_ADDON_KEY_SECRET}
       region: US
