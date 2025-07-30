@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#MISE description="Install dependencies"
+
+# Install fdb
+FDB_HOME=/home/bas/foundationdb
+
+mkdir -p ${FDB_HOME}
+mkdir -p ${FDB_HOME}/lib
+cp foundationdb/* ${FDB_HOME}/
+
+FDB_VERSION=7.3.68
+wget -O ${FDB_HOME}/fdbserver https://github.com/apple/foundationdb/releases/download/${FDB_VERSION}/fdbserver.x86_64
+wget -O ${FDB_HOME}/fdbmonitor https://github.com/apple/foundationdb/releases/download/${FDB_VERSION}/fdbmonitor.x86_64
+wget -O ${FDB_HOME}/fdbcli https://github.com/apple/foundationdb/releases/download/${FDB_VERSION}/fdbcli.x86_64
+wget -O ${FDB_HOME}/libfdb_c.so https://github.com/apple/foundationdb/releases/download/${FDB_VERSION}/libfdb_c.x86_64.so
+
+
+chmod +x ${FDB_HOME}/fdbserver /home/bas/foundationdb/fdbmonitor /home/bas/foundationdb/fdbcli
+
+echo PATH="\$PATH:$FDB_HOME" >> ~/.bashrc
+echo FDB_HOME="${FDB_HOME}" >> ~/.bashrc
+echo KESTRA_PLUGINS_PATH="$APP_HOME/kestra-install/plugins" >> ~/.bashrc
+echo RUSTFLAGS="-C linker=clang -L $FDB_HOME/lib" >> ~/.bashrc
